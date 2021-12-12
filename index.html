@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+  </style>
+  <title id="id1">Group 26 Miro</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Arman Ommid">
+  <meta name="description" content="Research">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miro Research</title>
+
+  <link rel="stylesheet" href="style.css">
+  <!-- <script src="main.js" type="module"></script> -->
+  <script>
+    const boardLink = "https://miro.com/app/board/o9J_lhcrqz4=/?invite_link_id=150716274812"
+    const boardID = "o9J_lhcrqz4="
+    const frameID = "3458764513886167657"
+    const embedAutplay = true;
+    const embedLink = 
+        "https://miro.com/app/live-embed/" + 
+        boardID + 
+        "/?moveToWidget=" + 
+        frameID +
+        "&embedAutoplay=" +
+        embedAutplay.toString();
+
+    const widgetsJSONfilename = "widgets.json";
+
+    window.addEventListener('DOMContentLoaded', init);
+
+    function showMiro(){
+      let main = document.querySelector("#body #main");
+      let miro = document.createElement("iframe");
+      miro.setAttribute("width", "1000");
+      miro.setAttribute("height", "666");
+      miro.setAttribute("src", embedLink);
+      miro.setAttribute("frameBorder", "0");
+      miro.setAttribute("scrolling", "no");
+      miro.setAttribute("allowFullScreen", "");
+      main.appendChild(miro);
+    }
+
+    async function init(){
+      showMiro();
+    }
+  </script>
+</head>
+
+<body id="body">
+  <h1>Embedded Miro Board (Focused on Diagram Frame)</h1>
+    <main id="main">
+        
+    </main>
+</body>
+
+<footer>
+</footer>
+
+</html>
